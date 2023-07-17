@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link rel="stylesheet" href="./style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+    <script src="js/util.js"></script>
+    <script src="js/core.js"></script>
+    <script src="js/arm.js"></script>
+    <script src="js/thumb.js"></script>
+    <script src="js/mmu.js"></script>
+    <script src="js/io.js"></script>
+    <script src="js/audio.js"></script>
+    <script src="js/video.js"></script>
+    <script src="js/video/proxy.js"></script>
+    <script src="js/video/software.js"></script>
+    <script src="js/irq.js"></script>
+    <script src="js/keypad.js"></script>
+    <script src="js/sio.js"></script>
+    <script src="js/savedata.js"></script>
+    <script src="js/gpio.js"></script>
+    <script src="js/gba.js"></script>
+    <script src="js/xhr.js"></script>
+  </head>
+  <body>
+    <div class="container-game-boy">
+      <div class="container-gameboy-console">
+        <!-- Container-gameboy-screen -->
+        <div class="container-gameboy-screen">
+            <!-- Pantalla de juego -->
+            <div class="screen">
+                <canvas id="screen-canvas" width="220" height="200"></canvas>
+                <div class="button-power" id="select"></div>
+                  <!-- <button class="bigbutton" id="select" onclick="document.getElementById('loader').click()">SELECT</button> -->
+                <input id="loader" type="file" accept=".gba">
+                  <!-- <button onclick="document.getElementById('saveloader').click()">Upload Savegame</button>
+                  <input id="saveloader" type="file" onchange="uploadSavedataPending(this.files[0]);"> -->
+                <!-- </div> -->
+                <div class="sound">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 5v.01M12 12v.01M12 19v.01M12 6a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z" />
+                  </svg>
+                </div>
+            </div> 
+            <!-- Texto debajo de la pantalla -->
+            <div class="text"> 
+                <span class="type">GAME BOY <span class="color-text">C<span style="color: #6047be;">O</span><span style="color: #ace271;">L</span><span style="color: #ebd248;">O</span>R</span></span>
+            </div>
+            <!-- Imagen de la pantalla -->
+            <img src="../assets/img/580b57fcd9996e24bc43c325.png"/>
+        </div>
+        <!-- Container-gameboy-control -->
+        <div class="container-gameboy-control">
+          <!-- Nombre Samurai -->
+          <div class="name-samurai">
+            SamuraiOr.dev
+          </div>
+          <!-- Controls -->
+          <div class="controls">
+            <!-- Cruceta -->
+            <div class="gameboy-croos">
+                <div class="cursor up">&#x25b2;</div>
+                <div class="cursor left">&#x25c0;</div>
+                <div class="cursor center">
+                    <div class="circle"></div>
+                </div>
+                <div class="cursor right">&#x25b6;</div>
+                <div class="cursor down">&#x25bc;</div>
+            </div>
+            <!-- Botones -->
+            <div class="gameboy-botones">
+              <div class="button-b">B</div>
+              <div class="button-a">A</div>
+            </div>
+          </div>
+          <div class="botones-selector">
+              <div class="select"></div>
+              <div class="start"></div>
+          </div>
+          <div class="name-selector">
+              <div style="margin-right: 30px;">Select</div>
+              <div>Start</div>
+          </div>
+          <div class="refigeration">
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+          </div>
+        </div> 
+      </div>
+    </div>
+    <!-- Descargar Save del Juego -->
+    <script type="module" src="main.js"></script>
+  </body>
+</html>
